@@ -1,7 +1,7 @@
 {
   "name": "Credits",
   "description": "Closing credits for a stream session",
-  "version": 1,
+  "version": 1.1,
   "author": "arblane",
   "components": {
     "commands": [
@@ -30,7 +30,8 @@
                     "listType": "preset",
                     "presetListArgs": {},
                     "presetListId": "3d3d1440-9c4d-11eb-a700-a3b45fafc0d1",
-                    "type": "firebot:run-effect-list"
+                    "type": "firebot:run-effect-list",
+                    "active": true
                   }
                 ]
               },
@@ -59,7 +60,7 @@
         },
         "id": "3764eee0-9e86-11eb-bb0d-edc857bfcae1",
         "ignoreBot": true,
-        "lastEditAt": "2023-04-22T13:36:28-04:00",
+        "lastEditAt": "2023-12-06T18:35:45-05:00",
         "lastEditBy": "arblane",
         "restrictionData": {
           "mode": "all",
@@ -140,7 +141,7 @@
         },
         "id": "06485054-9e8a-11eb-bb0d-edc857bfcae1",
         "ignoreBot": true,
-        "lastEditAt": "2023-11-12T10:44:03-05:00",
+        "lastEditAt": "2023-12-06T18:24:52-05:00",
         "lastEditBy": "arblane",
         "restrictionData": {
           "mode": "all",
@@ -183,6 +184,35 @@
         "active": true,
         "events": [
           {
+            "name": "[Credits] Set the resource path for credits",
+            "active": true,
+            "cached": true,
+            "sortTags": [
+              "d12ea204-d020-4fb6-94a8-5f9ce967229e"
+            ],
+            "eventId": "firebot-started",
+            "sourceId": "firebot",
+            "effects": {
+              "list": [
+                {
+                  "id": "46bee800-948d-11ee-ab32-53800fde3cf7",
+                  "type": "firebot:customvariable",
+                  "active": true,
+                  "ttl": 0,
+                  "name": "creditsResourcePath",
+                  "variableData": "E:\\Streaming\\Assets\\Overlays\\credits",
+                  "effectLabel": "creditsResourcePath"
+                }
+              ],
+              "id": "34d778a0-948d-11ee-ab32-53800fde3cf7"
+            },
+            "filterData": {
+              "mode": "exclusive",
+              "filters": []
+            },
+            "id": "3df80cb0-948d-11ee-ab32-53800fde3cf7"
+          },
+          {
             "active": true,
             "effects": {
               "id": "2ba1fc90-9dc0-11eb-8309-3d5ab3778470",
@@ -191,7 +221,7 @@
                   "deleteLineMode": "lines",
                   "dontRepeat": true,
                   "effectLabel": "Add mod's name to the file",
-                  "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\mods.txt",
+                  "filepath": "$customVariable[creditsResourcePath]\\mods.txt",
                   "id": "4f933060-9dc0-11eb-8309-3d5ab3778470",
                   "replaceLineMode": "lineNumbers",
                   "text": "$username",
@@ -243,7 +273,7 @@
                   "deleteLineMode": "lines",
                   "dontRepeat": true,
                   "effectLabel": "Add follower's name to the file",
-                  "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\follows.txt",
+                  "filepath": "$customVariable[creditsResourcePath]\\follows.txt",
                   "id": "0c2851a1-9e85-11eb-bb0d-edc857bfcae1",
                   "replaceLineMode": "lineNumbers",
                   "text": "$username",
@@ -284,7 +314,7 @@
                   "deleteLineMode": "lines",
                   "dontRepeat": true,
                   "effectLabel": "Add newly subbed user to the subs file",
-                  "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\subs.txt",
+                  "filepath": "$customVariable[creditsResourcePath]\\subs.txt",
                   "id": "67b88bc0-9c4b-11eb-a700-a3b45fafc0d1",
                   "replaceLineMode": "lineNumbers",
                   "text": "$user",
@@ -325,7 +355,7 @@
                   "deleteLineMode": "lines",
                   "dontRepeat": true,
                   "effectLabel": "Add sub gifter name to the file",
-                  "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\giftsubs.txt",
+                  "filepath": "$customVariable[creditsResourcePath]\\giftsubs.txt",
                   "id": "9e0aa4b0-9c4b-11eb-a700-a3b45fafc0d1",
                   "replaceLineMode": "lineNumbers",
                   "text": "$giftGiverUsername",
@@ -366,7 +396,7 @@
                   "deleteLineMode": "lines",
                   "dontRepeat": true,
                   "effectLabel": "Add sub gifter name to the file",
-                  "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\communitygiftsubs.txt",
+                  "filepath": "$customVariable[creditsResourcePath]\\communitygiftsubs.txt",
                   "id": "b3910cc0-9c4b-11eb-a700-a3b45fafc0d1",
                   "replaceLineMode": "lineNumbers",
                   "text": "$giftGiverUsername",
@@ -407,7 +437,7 @@
                   "deleteLineMode": "lines",
                   "dontRepeat": true,
                   "effectLabel": "Add bit tipper's name to the file",
-                  "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\bits.txt",
+                  "filepath": "$customVariable[creditsResourcePath]\\bits.txt",
                   "id": "c7c3f2c0-9c4b-11eb-a700-a3b45fafc0d1",
                   "replaceLineMode": "lineNumbers",
                   "text": "$user",
@@ -448,7 +478,7 @@
                   "deleteLineMode": "lines",
                   "dontRepeat": true,
                   "effectLabel": "Add raider to the file",
-                  "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\hostsraids.txt",
+                  "filepath": "$customVariable[creditsResourcePath]\\hostsraids.txt",
                   "id": "ddad1440-9c4b-11eb-a700-a3b45fafc0d1",
                   "replaceLineMode": "lineNumbers",
                   "text": "$user",
@@ -497,7 +527,7 @@
                   {
                     "deleteLineMode": "lines",
                     "effectLabel": "Clear the end credits file",
-                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                     "id": "84d30c30-508c-11ec-8bf8-29a6d3a6a465",
                     "replaceLineMode": "lineNumbers",
                     "type": "firebot:filewriter",
@@ -507,7 +537,7 @@
                   {
                     "deleteLineMode": "lines",
                     "effectLabel": "Clear the mods credits file",
-                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\mods.txt",
+                    "filepath": "$customVariable[creditsResourcePath]\\mods.txt",
                     "id": "84d30c31-508c-11ec-8bf8-29a6d3a6a465",
                     "replaceLineMode": "lineNumbers",
                     "type": "firebot:filewriter",
@@ -517,7 +547,7 @@
                   {
                     "deleteLineMode": "lines",
                     "effectLabel": "Clear the subs credits file",
-                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\subs.txt",
+                    "filepath": "$customVariable[creditsResourcePath]\\subs.txt",
                     "id": "84d30c32-508c-11ec-8bf8-29a6d3a6a465",
                     "replaceLineMode": "lineNumbers",
                     "type": "firebot:filewriter",
@@ -527,7 +557,7 @@
                   {
                     "deleteLineMode": "lines",
                     "effectLabel": "Clear the sub gifters credits file",
-                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\giftsubs.txt",
+                    "filepath": "$customVariable[creditsResourcePath]\\giftsubs.txt",
                     "id": "84d30c33-508c-11ec-8bf8-29a6d3a6a465",
                     "replaceLineMode": "lineNumbers",
                     "type": "firebot:filewriter",
@@ -537,7 +567,7 @@
                   {
                     "deleteLineMode": "lines",
                     "effectLabel": "Clear the community sub gifters credits file",
-                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\communitygiftsubs.txt",
+                    "filepath": "$customVariable[creditsResourcePath]\\communitygiftsubs.txt",
                     "id": "8dcd7760-03de-11ee-ba25-c3827507a8af",
                     "replaceLineMode": "lineNumbers",
                     "type": "firebot:filewriter",
@@ -547,7 +577,7 @@
                   {
                     "deleteLineMode": "lines",
                     "effectLabel": "Clear the bits credits file",
-                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\bits.txt",
+                    "filepath": "$customVariable[creditsResourcePath]\\bits.txt",
                     "id": "84d30c34-508c-11ec-8bf8-29a6d3a6a465",
                     "replaceLineMode": "lineNumbers",
                     "type": "firebot:filewriter",
@@ -557,7 +587,7 @@
                   {
                     "deleteLineMode": "lines",
                     "effectLabel": "Clear the hosts & raids credits file",
-                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\hostsraids.txt",
+                    "filepath": "$customVariable[creditsResourcePath]\\hostsraids.txt",
                     "id": "84d30c36-508c-11ec-8bf8-29a6d3a6a465",
                     "replaceLineMode": "lineNumbers",
                     "type": "firebot:filewriter",
@@ -567,7 +597,7 @@
                   {
                     "deleteLineMode": "lines",
                     "effectLabel": "Clear the follows credits file",
-                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\follows.txt",
+                    "filepath": "$customVariable[creditsResourcePath]\\follows.txt",
                     "id": "84d30c37-508c-11ec-8bf8-29a6d3a6a465",
                     "replaceLineMode": "lineNumbers",
                     "type": "firebot:filewriter",
@@ -682,7 +712,7 @@
                   {
                     "deleteLineMode": "lines",
                     "dontRepeat": true,
-                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                     "id": "0ca91590-9c70-11eb-a700-a3b45fafc0d1",
                     "replaceLineMode": "lineNumbers",
                     "text": "<link rel=\"stylesheet\" href=\"credit_marquee.css\">\n<div class=\"marquee\"><div class=\"marquee-container\">",
@@ -734,7 +764,7 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "10c963c0-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
                                     "text": "<h1>Mods:</h1>",
@@ -746,10 +776,10 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "10c963c1-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[E:\\Streaming\\credits\\mods.txt]</p>",
+                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\mods.txt]</p>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -803,7 +833,7 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "5bcc4540-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
                                     "text": "<h1>Follows:</h1>",
@@ -815,10 +845,10 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "5bcc4541-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[E:\\Streaming\\credits\\follows.txt]</p>",
+                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\follows.txt]</p>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -872,7 +902,7 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "4cb979b0-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
                                     "text": "<h1>Raids:</h1>",
@@ -884,10 +914,10 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "4cb979b1-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[E:\\Streaming\\credits\\hostsraids.txt]</p>",
+                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\hostsraids.txt]</p>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -941,7 +971,7 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "1c638350-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
                                     "text": "<h1>Subs & Resubs:</h1>",
@@ -953,10 +983,10 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "1c638351-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[E:\\Streaming\\credits\\subs.txt]</p>",
+                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\subs.txt]</p>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -1010,7 +1040,7 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "351a43c0-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
                                     "text": "<h1>Bits:</h1>",
@@ -1022,10 +1052,10 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "351a43c1-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[E:\\Streaming\\credits\\bits.txt]</p>",
+                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\bits.txt]</p>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -1079,7 +1109,7 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "2a5af3d0-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
                                     "text": "<h1>Sub gifters:</h1>",
@@ -1091,10 +1121,10 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "2a5af3d1-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[E:\\Streaming\\credits\\giftsubs.txt]</p>",
+                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\giftsubs.txt]</p>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -1148,7 +1178,7 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "2a5af3d0-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
                                     "text": "<h1>Community Sub gifters:</h1>",
@@ -1160,10 +1190,10 @@
                                     "deleteLineMode": "lines",
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
-                                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                                     "id": "2a5af3d1-508c-11ec-8bf8-29a6d3a6a465",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[E:\\Streaming\\credits\\communitygiftsubs.txt]</p>",
+                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\communitygiftsubs.txt]</p>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -1202,7 +1232,7 @@
                   {
                     "deleteLineMode": "lines",
                     "dontRepeat": true,
-                    "filepath": "E:\\Streaming\\Assets\\Overlays\\credits\\credits.html",
+                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                     "id": "3ca8d5a0-9c70-11eb-a700-a3b45fafc0d1",
                     "replaceLineMode": "lineNumbers",
                     "text": "</div></div>",
@@ -1233,5 +1263,13 @@
     "quickActions": []
   },
   "requireCurrency": false,
-  "importQuestions": []
+  "importQuestions": [
+    {
+      "id": "84025c00-a60c-4bb5-89fa-9e26e62f241e",
+      "question": "Where did you save the html, css, and txt files?",
+      "helpText": "Copy and paste the location.",
+      "answerType": "text",
+      "replaceToken": "E:\\Streaming\\Assets\\Overlays\\credits"
+    }
+  ]
 }
