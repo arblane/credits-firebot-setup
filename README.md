@@ -28,13 +28,13 @@ Firebot setup for playing credits at the end of stream.
 # Usage
 
 ## Requirements for Chat
-+ bits: Must cheer at least one bit
-+ communitygiftsubs: Don't remember if this is the giftee or the gifter. TODO
-+ follows: Must be a new follower
-+ giftsubs: Don't remember if this is the giftee or the gifter. TODO
-+ hostsraids: Must raid into stream. Hosts are deprecated.
-+ mods: Must be a mod of the channel and must have typed in chat.
-+ subs: Must subscribe or resubscribe to the channel.
++ bits - Must cheer at least one bit
++ communitygiftsubs - Must gift at least one sub to the community.
++ follows - Must be a new follower
++ giftsubs - Must gift at least one sub.
++ hostsraids - Must raid into stream. Hosts are deprecated.
++ mods - Must be a mod of the channel and must have typed in chat.
++ subs - Must subscribe or resubscribe to the channel.
 
 ## Streamer Info
 + Commands
