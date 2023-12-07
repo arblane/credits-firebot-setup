@@ -40,7 +40,8 @@ Firebot setup for playing credits at the end of stream.
 + Commands
     + !clearcredits - clears the txt files, can be added to a startup event
     + !rollcredits - rolle the credits, can be connected to a touch portal/stream deck button
-      + Currently configured to run as a browswer source in OBS, to have it use the firebot overlay, add an html effect to !rollcredit and point to the html file that gets generated.
+      + Currently configured to run as a browswer source in OBS
+      + TODO An alternate version of the setup will be forthcoming that moves all of the html and css into a show html effect to make use of the firebot overlay
 
 # Credits
 + Adapted from setup by: cavemobster
