@@ -3,29 +3,30 @@
 # Description
 Firebot setup for playing credits at the end of stream.
 
-# Requirement
-- Firebot, any version
+# Compatibility
+- Firebot 5.59.2+
 
 # Install
-+ To install, download:
++ Download
   + Credits.firebotsetup
   + credits.html
   + credit_marquee.css
-  + Each of the following text files
-    + bits.txt
-    + communitygiftsubs.txt
-    + follows.txt
-    + giftsubs.txt
-    + hostsraids.txt
-    + mods.txt
-    + subs.txt
-+ Import setup for Firebot by going to Settings > Setups > Import Setup.
-  + Choose the file "Credits.firebotsetup" from the location you just downloaded it to, then click Import setup. 
-  + Customize:
+  + bits.txt
+  + communitygiftsubs.txt
+  + follows.txt
+  + giftsubs.txt
+  + hostsraids.txt
+  + mods.txt
+  + subs.txt
++ Import the downloaded firebotsetup file
+  + Customize
     + You will need to edit the preset effect to change the location of the html and text files.
     + Location, color, etc of the marquee
 
 # Usage
+
+## Overlay
++ This firebotsetup makes use of a scene in OBS
 
 ## Requirements for Chat
 + bits - Must cheer at least one bit
@@ -38,10 +39,10 @@ Firebot setup for playing credits at the end of stream.
 
 ## Streamer Info
 + Commands
-    + !clearcredits - clears the txt files, can be added to a startup event
-    + !rollcredits - rolle the credits, can be connected to a touch portal/stream deck button
-      + Currently configured to run as a browswer source in OBS
-      + TODO An alternate version of the setup will be forthcoming that moves all of the html and css into a show html effect to make use of the firebot overlay
+    + !clearcredits
+      + clears the txt files, can be added to a startup event
+    + !rollcredits
+      + roll the credits, can be connected to a touch portal/stream deck button
 
 # Credits
 + Adapted from setup by: cavemobster
