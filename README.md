@@ -4,7 +4,7 @@
 Firebot setup for playing credits at the end of stream.
 
 # Compatibility
-- Firebot 5.59.2+
+- Firebot 5.58.0+
 
 # Install
 + Download
