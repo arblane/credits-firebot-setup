@@ -20,7 +20,7 @@ Firebot setup for playing credits at the end of stream.
   + subs.txt
 + Import the downloaded firebotsetup file
   + Customize
-    + You will need to edit the preset effect to change the location of the html and text files.
+    + You will need to edit the preset effect to change the location of the html and text files. This will be handled via an import question.
     + Location, color, etc of the marquee
 
 # Usage
