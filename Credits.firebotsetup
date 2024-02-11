@@ -1,7 +1,7 @@
 {
   "name": "Credits",
   "description": "Closing credits for a stream session",
-  "version": 2,
+  "version": 2.1,
   "author": "arblane",
   "components": {
     "commands": [
@@ -662,7 +662,7 @@
                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                     "id": "a772e401-c8e3-11ee-b4b3-a563b8e75233",
                     "replaceLineMode": "lineNumbers",
-                    "text": "<style>\n$readFile[\"E:\\Streaming\\Assets\\Overlays\\credits\\credit_marquee.css\"]\n</style>\n<div class=\"container\">\n\t<div class=\"marquee-container\">\n\t\t<div class=\"marquee\">\n\t\t\t<p>",
+                    "text": "<style>\n$readFile[$customVariable[creditsResourcePath]\"\\credit_marquee.css\"]\n</style>\n<div class=\"container\">\n\t<div class=\"marquee-container\">\n\t\t<div class=\"marquee\">\n\t\t\t<p>",
                     "type": "firebot:filewriter",
                     "writeMode": "append",
                     "active": true
@@ -691,7 +691,7 @@
                           "conditions": [
                             {
                               "comparisonType": "is greater than or equal to",
-                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\mods.txt\"]",
+                              "leftSideValue": "$fileLineCount[$customVariable[creditsResourcePath]\"\\mods.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -772,7 +772,7 @@
                           "conditions": [
                             {
                               "comparisonType": "is greater than or equal to",
-                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\follows.txt\"]",
+                              "leftSideValue": "$fileLineCount[$customVariable[creditsResourcePath]\"\\follows.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -853,7 +853,7 @@
                           "conditions": [
                             {
                               "comparisonType": "is greater than or equal to",
-                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\hostsRaids.txt\"]",
+                              "leftSideValue": "$fileLineCount[$customVariable[creditsResourcePath]\"\\hostsRaids.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -934,7 +934,7 @@
                           "conditions": [
                             {
                               "comparisonType": "is greater than or equal to",
-                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\subs.txt\"]",
+                              "leftSideValue": "$fileLineCount[$customVariable[creditsResourcePath]\"\\subs.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -1015,7 +1015,7 @@
                           "conditions": [
                             {
                               "comparisonType": "is greater than or equal to",
-                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\bits.txt\"]",
+                              "leftSideValue": "$fileLineCount[$customVariable[creditsResourcePath]\"\\bits.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -1096,7 +1096,7 @@
                           "conditions": [
                             {
                               "comparisonType": "is greater than or equal to",
-                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\giftSubs.txt\"]",
+                              "leftSideValue": "$fileLineCount[$customVariable[creditsResourcePath]\"\\giftSubs.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -1177,7 +1177,7 @@
                           "conditions": [
                             {
                               "comparisonType": "is greater than or equal to",
-                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\communitygiftsubs.txt\"]",
+                              "leftSideValue": "$fileLineCount[$customVariable[creditsResourcePath]\"\\communitygiftsubs.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -1286,7 +1286,7 @@
               "enterAnimation": "none",
               "exitAnimation": "none",
               "inbetweenAnimation": "none",
-              "html": "$readFile[\"E:\\Streaming\\Assets\\Overlays\\credits\\credits.html\"]",
+              "html": "$readFile[$customVariable[creditsResourcePath]\"\\credits.html\"]",
               "length": "400"
             }
           ]
@@ -1304,5 +1304,13 @@
     "quickActions": []
   },
   "requireCurrency": false,
-  "importQuestions": []
+  "importQuestions": [
+    {
+      "id": "269e7252-6020-4b29-9bbf-40bea63ed84f",
+      "question": "What is the path you chose to store the TXT, CSS, and HTML files?",
+      "defaultAnswer": "E:\\Streaming\\Assets\\Overlays\\credits",
+      "answerType": "text",
+      "replaceToken": "E:\\Streaming\\Assets\\Overlays\\credits"
+    }
+  ]
 }
