@@ -4,7 +4,7 @@
 Firebot setup for playing credits at the end of stream.
 
 # Compatibility
-- Firebot 5.58.0+
+- Firebot 5.60.1+
 
 # Install
 + Download
@@ -26,7 +26,7 @@ Firebot setup for playing credits at the end of stream.
 # Usage
 
 ## Overlay
-+ This firebotsetup makes use of a scene in OBS
++ This firebotsetup makes use of the Firebot overlay
 
 ## Requirements for Chat
 + bits - Must cheer at least one bit

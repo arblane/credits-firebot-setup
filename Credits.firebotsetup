@@ -1,7 +1,7 @@
 {
   "name": "Credits",
   "description": "Closing credits for a stream session",
-  "version": 1.1,
+  "version": 2,
   "author": "arblane",
   "components": {
     "commands": [
@@ -52,15 +52,25 @@
             {
               "id": "8f63c990-d16f-11ed-9eb8-8b0137e9fd32",
               "type": "ebiggz:obs-change-scene",
-              "active": true,
+              "active": false,
               "custom": false,
               "sceneName": "End"
+            },
+            {
+              "id": "cd9daa30-9548-11ee-a3f8-e9a28109244b",
+              "type": "firebot:html",
+              "active": true,
+              "enterAnimation": "fadeIn",
+              "exitAnimation": "fadeOut",
+              "inbetweenAnimation": "none",
+              "html": "<style>\nbody {\n\tmargin: 0px auto;\n\tcolor: #FFF;  /* The color of the font, change this to your preferred text color. */\n\tfont-family: Kalam; /* Change this to your preferred font. */\n\ttext-align: center;\n\toverflow: hidden;\n}\n\n.marquee {\n\toverflow: hidden;\n\theight: 100%;\n\tbackground-color: rgba(170, 93,213,0.5);\n\tborder-radius: 25px;\n}\n\n.marquee-container {\n\tanimation: marquee 45s linear infinite; /* Increase or decrease the 45s value to set how fast the text needs to scroll. */\n\theight: auto;\n}\n\n@keyframes marquee {\n\t0% { margin-top: 100vh }\n\t100% { transform: translateY(-100%) }\n}\n\nh1 {\n/*\n\tfont-size: Title font size, increase or decrease the number to your liking.\n\tfont-weight: Options: 100, 200, 300, 400, 500, 600, 700, 800, 900.\n\tmargin: Increase or decrease the 5px value, this takes care of the space between the title and the names.\n*/\n\tfont-size: 35px;\n\tfont-weight: 700;\n\tmargin: 0 0 5px 0;\n}\n\np {\n/*\n\tfont-size: Font size of the names, increase or decrease the number to your liking.\n\tfont-weight: Options: 100, 200, 300, 400, 500, 600, 700, 800, 900.\n\tmargin: Increase or decrease the 40px value, this takes care of the space between the blocks.\n*/\n\tfont-size: 25px;\n\tfont-weight: 300;\n\tmargin: 0 0 40px 0;\n\twhite-space: pre-line;\n}\n</style>\n<div class=\"marquee\"><div class=\"marquee-container\">\n    <h1>Mods:</h1>\n    me\n</div></div><link rel=\"stylesheet\" href=\"credit_marquee.css\">\n<div class=\"marquee\"><div class=\"marquee-container\">\n",
+              "length": "200"
             }
           ]
         },
         "id": "3764eee0-9e86-11eb-bb0d-edc857bfcae1",
         "ignoreBot": true,
-        "lastEditAt": "2023-12-06T18:35:45-05:00",
+        "lastEditAt": "2023-12-07T16:47:36-05:00",
         "lastEditBy": "arblane",
         "restrictionData": {
           "mode": "all",
@@ -135,13 +145,13 @@
               "id": "fe9c5f40-9ea7-11eb-92d5-b1f56392bfde",
               "message": "Credits have been cleared.",
               "type": "firebot:chat",
-              "active": true
+              "active": false
             }
           ]
         },
         "id": "06485054-9e8a-11eb-bb0d-edc857bfcae1",
         "ignoreBot": true,
-        "lastEditAt": "2023-12-06T18:24:52-05:00",
+        "lastEditAt": "2023-12-07T09:19:50-05:00",
         "lastEditBy": "arblane",
         "restrictionData": {
           "mode": "all",
@@ -228,15 +238,6 @@
                   "type": "firebot:filewriter",
                   "writeMode": "append",
                   "active": true
-                },
-                {
-                  "effectLabel": "Flag to show up in credits",
-                  "id": "4f933061-9dc0-11eb-8309-3d5ab3778470",
-                  "name": "modsCreditsSet",
-                  "ttl": 0,
-                  "type": "firebot:customvariable",
-                  "variableData": "1",
-                  "active": true
                 }
               ]
             },
@@ -280,15 +281,6 @@
                   "type": "firebot:filewriter",
                   "writeMode": "append",
                   "active": true
-                },
-                {
-                  "effectLabel": "Flag to show up in credits",
-                  "id": "0c2851a2-9e85-11eb-bb0d-edc857bfcae1",
-                  "name": "followsCreditsSet",
-                  "ttl": 0,
-                  "type": "firebot:customvariable",
-                  "variableData": "1",
-                  "active": true
                 }
               ]
             },
@@ -320,15 +312,6 @@
                   "text": "$user",
                   "type": "firebot:filewriter",
                   "writeMode": "append",
-                  "active": true
-                },
-                {
-                  "effectLabel": "Flag to show up in credits",
-                  "id": "584b2980-9dbe-11eb-8309-3d5ab3778470",
-                  "name": "subsCreditsSet",
-                  "ttl": 0,
-                  "type": "firebot:customvariable",
-                  "variableData": "1",
                   "active": true
                 }
               ]
@@ -362,15 +345,6 @@
                   "type": "firebot:filewriter",
                   "writeMode": "append",
                   "active": true
-                },
-                {
-                  "effectLabel": "Flag to show up in credits",
-                  "id": "8c1007e0-9dbe-11eb-8309-3d5ab3778470",
-                  "name": "giftSubsCreditsSet",
-                  "ttl": 0,
-                  "type": "firebot:customvariable",
-                  "variableData": "1",
-                  "active": true
                 }
               ]
             },
@@ -402,15 +376,6 @@
                   "text": "$giftGiverUsername",
                   "type": "firebot:filewriter",
                   "writeMode": "append",
-                  "active": true
-                },
-                {
-                  "effectLabel": "Flag to show up in credits",
-                  "id": "9ee70760-9dbe-11eb-8309-3d5ab3778470",
-                  "name": "giftSubsCreditsSet",
-                  "ttl": 0,
-                  "type": "firebot:customvariable",
-                  "variableData": "1",
                   "active": true
                 }
               ]
@@ -444,15 +409,6 @@
                   "type": "firebot:filewriter",
                   "writeMode": "append",
                   "active": true
-                },
-                {
-                  "effectLabel": "Flag to show up in credits",
-                  "id": "a86cc5e0-9dbe-11eb-8309-3d5ab3778470",
-                  "name": "bitsCreditsSet",
-                  "ttl": 0,
-                  "type": "firebot:customvariable",
-                  "variableData": "1",
-                  "active": true
                 }
               ]
             },
@@ -484,15 +440,6 @@
                   "text": "$user",
                   "type": "firebot:filewriter",
                   "writeMode": "append",
-                  "active": true
-                },
-                {
-                  "effectLabel": "Flag to show up in credits",
-                  "id": "aeddf160-9dbe-11eb-8309-3d5ab3778470",
-                  "name": "hostsRaidsCreditsSet",
-                  "ttl": 0,
-                  "type": "firebot:customvariable",
-                  "variableData": "1",
                   "active": true
                 }
               ]
@@ -702,34 +649,34 @@
       {
         "args": [],
         "effects": {
-          "id": "3d3d1441-9c4d-11eb-a700-a3b45fafc0d1",
+          "id": "a772bcf0-c8e3-11ee-b4b3-a563b8e75233",
           "list": [
             {
               "effectLabel": "Add wrapper HTML to the file",
               "effectList": {
-                "id": "07c4f2b0-9c70-11eb-a700-a3b45fafc0d1",
+                "id": "a772e400-c8e3-11ee-b4b3-a563b8e75233",
                 "list": [
                   {
                     "deleteLineMode": "lines",
                     "dontRepeat": true,
                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                    "id": "0ca91590-9c70-11eb-a700-a3b45fafc0d1",
+                    "id": "a772e401-c8e3-11ee-b4b3-a563b8e75233",
                     "replaceLineMode": "lineNumbers",
-                    "text": "<link rel=\"stylesheet\" href=\"credit_marquee.css\">\n<div class=\"marquee\"><div class=\"marquee-container\">",
+                    "text": "<style>\n$readFile[\"E:\\Streaming\\Assets\\Overlays\\credits\\credit_marquee.css\"]\n</style>\n<div class=\"container\">\n\t<div class=\"marquee-container\">\n\t\t<div class=\"marquee\">\n\t\t\t<p>",
                     "type": "firebot:filewriter",
                     "writeMode": "append",
                     "active": true
                   }
                 ]
               },
-              "id": "d75e1530-5091-11ec-8bf8-29a6d3a6a465",
+              "id": "a772e402-c8e3-11ee-b4b3-a563b8e75233",
               "listType": "custom",
               "presetListArgs": {},
               "type": "firebot:run-effect-list",
               "active": true
             },
             {
-              "id": "d75e1531-5091-11ec-8bf8-29a6d3a6a465",
+              "id": "a772e403-c8e3-11ee-b4b3-a563b8e75233",
               "type": "firebot:run-effect-list",
               "listType": "custom",
               "presetListArgs": {},
@@ -737,14 +684,14 @@
                 "list": [
                   {
                     "effectLabel": "If available, add mods to the file",
-                    "id": "034bb722-508c-11ec-8bf8-29a6d3a6a465",
+                    "id": "a772e404-c8e3-11ee-b4b3-a563b8e75233",
                     "ifs": [
                       {
                         "conditionData": {
                           "conditions": [
                             {
-                              "comparisonType": "is",
-                              "leftSideValue": "$customVariable[modsCreditsSet]",
+                              "comparisonType": "is greater than or equal to",
+                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\mods.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -753,21 +700,21 @@
                           "mode": "exclusive"
                         },
                         "effectData": {
-                          "id": "02f81820-9dbf-11eb-8309-3d5ab3778470",
+                          "id": "a772e405-c8e3-11ee-b4b3-a563b8e75233",
                           "list": [
                             {
                               "effectLabel": "Add mods to the file",
                               "effectList": {
-                                "id": "42edaee0-9c4d-11eb-a700-a3b45fafc0d1",
+                                "id": "a772e406-c8e3-11ee-b4b3-a563b8e75233",
                                 "list": [
                                   {
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "10c963c0-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a772e407-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<h1>Mods:</h1>",
+                                    "text": "<u>Mods:</u>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -777,16 +724,28 @@
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "10c963c1-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a772e408-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\mods.txt]</p>",
+                                    "text": "$readFile[$customVariable[creditsResourcePath]\\mods.txt]",
+                                    "type": "firebot:filewriter",
+                                    "writeMode": "append",
+                                    "active": true
+                                  },
+                                  {
+                                    "deleteLineMode": "lines",
+                                    "dontRepeat": false,
+                                    "effectLabel": "line break",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
+                                    "id": "46749a10-c8fa-11ee-b4b3-a563b8e75233",
+                                    "replaceLineMode": "lineNumbers",
+                                    "text": "<br>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
                                   }
                                 ]
                               },
-                              "id": "8f2217f0-9dc0-11eb-8309-3d5ab3778470",
+                              "id": "a772e409-c8e3-11ee-b4b3-a563b8e75233",
                               "listType": "custom",
                               "presetListArgs": {},
                               "presetListId": null,
@@ -798,7 +757,7 @@
                       }
                     ],
                     "otherwiseEffectData": {
-                      "id": "02f6b890-9dbf-11eb-8309-3d5ab3778470",
+                      "id": "a772e40a-c8e3-11ee-b4b3-a563b8e75233",
                       "list": []
                     },
                     "type": "firebot:conditional-effects",
@@ -806,14 +765,14 @@
                   },
                   {
                     "effectLabel": "If available, add followers to the file",
-                    "id": "034bb728-508c-11ec-8bf8-29a6d3a6a465",
+                    "id": "a772e40b-c8e3-11ee-b4b3-a563b8e75233",
                     "ifs": [
                       {
                         "conditionData": {
                           "conditions": [
                             {
-                              "comparisonType": "is",
-                              "leftSideValue": "$customVariable[followsCreditsSet]",
+                              "comparisonType": "is greater than or equal to",
+                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\follows.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -822,21 +781,21 @@
                           "mode": "exclusive"
                         },
                         "effectData": {
-                          "id": "02f81820-9dbf-11eb-8309-3d5ab3778470",
+                          "id": "a772e40c-c8e3-11ee-b4b3-a563b8e75233",
                           "list": [
                             {
                               "effectLabel": "Add followers to the file",
                               "effectList": {
-                                "id": "b3e42e70-9c4e-11eb-a700-a3b45fafc0d1",
+                                "id": "a772e40d-c8e3-11ee-b4b3-a563b8e75233",
                                 "list": [
                                   {
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "5bcc4540-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a772e40e-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<h1>Follows:</h1>",
+                                    "text": "<u>Follows:</u>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -846,16 +805,28 @@
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "5bcc4541-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a772e40f-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\follows.txt]</p>",
+                                    "text": "$readFile[$customVariable[creditsResourcePath]\\follows.txt]",
+                                    "type": "firebot:filewriter",
+                                    "writeMode": "append",
+                                    "active": true
+                                  },
+                                  {
+                                    "deleteLineMode": "lines",
+                                    "dontRepeat": false,
+                                    "effectLabel": "line break",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
+                                    "id": "8f97e620-c8fa-11ee-b4b3-a563b8e75233",
+                                    "replaceLineMode": "lineNumbers",
+                                    "text": "<br>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
                                   }
                                 ]
                               },
-                              "id": "c05a4d70-9dbf-11eb-8309-3d5ab3778470",
+                              "id": "a772e410-c8e3-11ee-b4b3-a563b8e75233",
                               "listType": "custom",
                               "presetListArgs": {},
                               "presetListId": null,
@@ -867,7 +838,7 @@
                       }
                     ],
                     "otherwiseEffectData": {
-                      "id": "02f6b890-9dbf-11eb-8309-3d5ab3778470",
+                      "id": "a772e411-c8e3-11ee-b4b3-a563b8e75233",
                       "list": []
                     },
                     "type": "firebot:conditional-effects",
@@ -875,14 +846,14 @@
                   },
                   {
                     "effectLabel": "If available, add hosts and raiders to the file",
-                    "id": "034bb727-508c-11ec-8bf8-29a6d3a6a465",
+                    "id": "a772e412-c8e3-11ee-b4b3-a563b8e75233",
                     "ifs": [
                       {
                         "conditionData": {
                           "conditions": [
                             {
-                              "comparisonType": "is",
-                              "leftSideValue": "$customVariable[hostsRaidsCreditsSet]",
+                              "comparisonType": "is greater than or equal to",
+                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\hostsRaids.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -891,21 +862,21 @@
                           "mode": "exclusive"
                         },
                         "effectData": {
-                          "id": "02f81820-9dbf-11eb-8309-3d5ab3778470",
+                          "id": "a772e413-c8e3-11ee-b4b3-a563b8e75233",
                           "list": [
                             {
                               "effectLabel": "Add hosts and raiders to the file",
                               "effectList": {
-                                "id": "b3e42e70-9c4e-11eb-a700-a3b45fafc0d1",
+                                "id": "a772e414-c8e3-11ee-b4b3-a563b8e75233",
                                 "list": [
                                   {
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "4cb979b0-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a772e415-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<h1>Raids:</h1>",
+                                    "text": "<u>Raids:</u>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -915,16 +886,28 @@
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "4cb979b1-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a772e416-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\hostsraids.txt]</p>",
+                                    "text": "$readFile[$customVariable[creditsResourcePath]\\hostsraids.txt]",
+                                    "type": "firebot:filewriter",
+                                    "writeMode": "append",
+                                    "active": true
+                                  },
+                                  {
+                                    "deleteLineMode": "lines",
+                                    "dontRepeat": false,
+                                    "effectLabel": "line break",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
+                                    "id": "8f97e620-c8fa-11ee-b4b3-a563b8e75233",
+                                    "replaceLineMode": "lineNumbers",
+                                    "text": "<br>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
                                   }
                                 ]
                               },
-                              "id": "c05a4d70-9dbf-11eb-8309-3d5ab3778470",
+                              "id": "a772e417-c8e3-11ee-b4b3-a563b8e75233",
                               "listType": "custom",
                               "presetListArgs": {},
                               "presetListId": null,
@@ -936,7 +919,7 @@
                       }
                     ],
                     "otherwiseEffectData": {
-                      "id": "02f6b890-9dbf-11eb-8309-3d5ab3778470",
+                      "id": "a772e418-c8e3-11ee-b4b3-a563b8e75233",
                       "list": []
                     },
                     "type": "firebot:conditional-effects",
@@ -944,14 +927,14 @@
                   },
                   {
                     "effectLabel": "If available, add subs to the file",
-                    "id": "034bb723-508c-11ec-8bf8-29a6d3a6a465",
+                    "id": "a772e419-c8e3-11ee-b4b3-a563b8e75233",
                     "ifs": [
                       {
                         "conditionData": {
                           "conditions": [
                             {
-                              "comparisonType": "is",
-                              "leftSideValue": "$customVariable[subsCreditsSet]",
+                              "comparisonType": "is greater than or equal to",
+                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\subs.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -960,21 +943,21 @@
                           "mode": "exclusive"
                         },
                         "effectData": {
-                          "id": "02f81820-9dbf-11eb-8309-3d5ab3778470",
+                          "id": "a772e41a-c8e3-11ee-b4b3-a563b8e75233",
                           "list": [
                             {
                               "effectLabel": "Add subs to the file",
                               "effectList": {
-                                "id": "51a03200-9c4d-11eb-a700-a3b45fafc0d1",
+                                "id": "a772e41b-c8e3-11ee-b4b3-a563b8e75233",
                                 "list": [
                                   {
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "1c638350-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a772e41c-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<h1>Subs & Resubs:</h1>",
+                                    "text": "<u>Subs & Resubs:</u>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -984,16 +967,28 @@
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "1c638351-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a772e41d-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\subs.txt]</p>",
+                                    "text": "$readFile[$customVariable[creditsResourcePath]\\subs.txt]",
+                                    "type": "firebot:filewriter",
+                                    "writeMode": "append",
+                                    "active": true
+                                  },
+                                  {
+                                    "deleteLineMode": "lines",
+                                    "dontRepeat": false,
+                                    "effectLabel": "line break",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
+                                    "id": "8f97e620-c8fa-11ee-b4b3-a563b8e75233",
+                                    "replaceLineMode": "lineNumbers",
+                                    "text": "<br>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
                                   }
                                 ]
                               },
-                              "id": "1b4f7a80-9dbf-11eb-8309-3d5ab3778470",
+                              "id": "a772e41e-c8e3-11ee-b4b3-a563b8e75233",
                               "listType": "custom",
                               "presetListArgs": {},
                               "presetListId": null,
@@ -1005,7 +1000,7 @@
                       }
                     ],
                     "otherwiseEffectData": {
-                      "id": "02f6b890-9dbf-11eb-8309-3d5ab3778470",
+                      "id": "a772e41f-c8e3-11ee-b4b3-a563b8e75233",
                       "list": []
                     },
                     "type": "firebot:conditional-effects",
@@ -1013,14 +1008,14 @@
                   },
                   {
                     "effectLabel": "If available, add bit tippers to the file",
-                    "id": "034bb725-508c-11ec-8bf8-29a6d3a6a465",
+                    "id": "a772e420-c8e3-11ee-b4b3-a563b8e75233",
                     "ifs": [
                       {
                         "conditionData": {
                           "conditions": [
                             {
-                              "comparisonType": "is",
-                              "leftSideValue": "$customVariable[bitsCreditsSet]",
+                              "comparisonType": "is greater than or equal to",
+                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\bits.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -1029,21 +1024,21 @@
                           "mode": "exclusive"
                         },
                         "effectData": {
-                          "id": "02f81820-9dbf-11eb-8309-3d5ab3778470",
+                          "id": "a772e421-c8e3-11ee-b4b3-a563b8e75233",
                           "list": [
                             {
                               "effectLabel": "Add bit tippers to the file",
                               "effectList": {
-                                "id": "9e801b70-9c4e-11eb-a700-a3b45fafc0d1",
+                                "id": "a772e422-c8e3-11ee-b4b3-a563b8e75233",
                                 "list": [
                                   {
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "351a43c0-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a772e423-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<h1>Bits:</h1>",
+                                    "text": "<u>Bits:</u>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -1053,16 +1048,28 @@
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "351a43c1-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a772e424-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\bits.txt]</p>",
+                                    "text": "$readFile[$customVariable[creditsResourcePath]\\bits.txt]",
+                                    "type": "firebot:filewriter",
+                                    "writeMode": "append",
+                                    "active": true
+                                  },
+                                  {
+                                    "deleteLineMode": "lines",
+                                    "dontRepeat": false,
+                                    "effectLabel": "line break",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
+                                    "id": "8f97e620-c8fa-11ee-b4b3-a563b8e75233",
+                                    "replaceLineMode": "lineNumbers",
+                                    "text": "<br>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
                                   }
                                 ]
                               },
-                              "id": "6d0b3ee0-9dbf-11eb-8309-3d5ab3778470",
+                              "id": "a772e425-c8e3-11ee-b4b3-a563b8e75233",
                               "listType": "custom",
                               "presetListArgs": {},
                               "presetListId": null,
@@ -1074,7 +1081,7 @@
                       }
                     ],
                     "otherwiseEffectData": {
-                      "id": "02f6b890-9dbf-11eb-8309-3d5ab3778470",
+                      "id": "a7730b10-c8e3-11ee-b4b3-a563b8e75233",
                       "list": []
                     },
                     "type": "firebot:conditional-effects",
@@ -1082,14 +1089,14 @@
                   },
                   {
                     "effectLabel": "If available, add sub gifters to the file",
-                    "id": "034bb724-508c-11ec-8bf8-29a6d3a6a465",
+                    "id": "a7730b11-c8e3-11ee-b4b3-a563b8e75233",
                     "ifs": [
                       {
                         "conditionData": {
                           "conditions": [
                             {
-                              "comparisonType": "is",
-                              "leftSideValue": "$customVariable[giftSubsCreditsSet]",
+                              "comparisonType": "is greater than or equal to",
+                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\giftSubs.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -1098,21 +1105,21 @@
                           "mode": "exclusive"
                         },
                         "effectData": {
-                          "id": "02f81820-9dbf-11eb-8309-3d5ab3778470",
+                          "id": "a7730b12-c8e3-11ee-b4b3-a563b8e75233",
                           "list": [
                             {
                               "effectLabel": "Add sub gifters to the file",
                               "effectList": {
-                                "id": "91278300-9c4e-11eb-a700-a3b45fafc0d1",
+                                "id": "a7730b13-c8e3-11ee-b4b3-a563b8e75233",
                                 "list": [
                                   {
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "2a5af3d0-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a7730b14-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<h1>Sub gifters:</h1>",
+                                    "text": "<u>Sub gifters:</u>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -1122,16 +1129,28 @@
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "2a5af3d1-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a7730b15-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\giftsubs.txt]</p>",
+                                    "text": "$readFile[$customVariable[creditsResourcePath]\\giftsubs.txt]",
+                                    "type": "firebot:filewriter",
+                                    "writeMode": "append",
+                                    "active": true
+                                  },
+                                  {
+                                    "deleteLineMode": "lines",
+                                    "dontRepeat": false,
+                                    "effectLabel": "line break",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
+                                    "id": "8f97e620-c8fa-11ee-b4b3-a563b8e75233",
+                                    "replaceLineMode": "lineNumbers",
+                                    "text": "<br>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
                                   }
                                 ]
                               },
-                              "id": "52ab8960-9dbf-11eb-8309-3d5ab3778470",
+                              "id": "a7730b16-c8e3-11ee-b4b3-a563b8e75233",
                               "listType": "custom",
                               "presetListArgs": {},
                               "presetListId": null,
@@ -1143,7 +1162,7 @@
                       }
                     ],
                     "otherwiseEffectData": {
-                      "id": "02f6b890-9dbf-11eb-8309-3d5ab3778470",
+                      "id": "a7730b17-c8e3-11ee-b4b3-a563b8e75233",
                       "list": []
                     },
                     "type": "firebot:conditional-effects",
@@ -1151,14 +1170,14 @@
                   },
                   {
                     "effectLabel": "If available, add community sub gifters to the file",
-                    "id": "c86e6d80-03dd-11ee-ba25-c3827507a8af",
+                    "id": "a7730b18-c8e3-11ee-b4b3-a563b8e75233",
                     "ifs": [
                       {
                         "conditionData": {
                           "conditions": [
                             {
-                              "comparisonType": "is",
-                              "leftSideValue": "$customVariable[giftSubsCreditsSet]",
+                              "comparisonType": "is greater than or equal to",
+                              "leftSideValue": "$fileLineCount[\"E:\\Streaming\\Assets\\Overlays\\credits\\communitygiftsubs.txt\"]",
                               "rightSideValue": "1",
                               "type": "firebot:custom",
                               "value": null
@@ -1167,21 +1186,21 @@
                           "mode": "exclusive"
                         },
                         "effectData": {
-                          "id": "02f81820-9dbf-11eb-8309-3d5ab3778470",
+                          "id": "a7730b19-c8e3-11ee-b4b3-a563b8e75233",
                           "list": [
                             {
                               "effectLabel": "Add community sub gifters to the file",
                               "effectList": {
-                                "id": "91278300-9c4e-11eb-a700-a3b45fafc0d1",
+                                "id": "a7730b1a-c8e3-11ee-b4b3-a563b8e75233",
                                 "list": [
                                   {
                                     "deleteLineMode": "lines",
                                     "dontRepeat": true,
                                     "effectLabel": "Title",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "2a5af3d0-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a7730b1b-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<h1>Community Sub gifters:</h1>",
+                                    "text": "<u>Community Sub gifters:</u>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
@@ -1191,16 +1210,28 @@
                                     "dontRepeat": false,
                                     "effectLabel": "Names",
                                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                                    "id": "2a5af3d1-508c-11ec-8bf8-29a6d3a6a465",
+                                    "id": "a7730b1c-c8e3-11ee-b4b3-a563b8e75233",
                                     "replaceLineMode": "lineNumbers",
-                                    "text": "<p>$readFile[$customVariable[creditsResourcePath]\\communitygiftsubs.txt]</p>",
+                                    "text": "$readFile[$customVariable[creditsResourcePath]\\communitygiftsubs.txt]",
+                                    "type": "firebot:filewriter",
+                                    "writeMode": "append",
+                                    "active": true
+                                  },
+                                  {
+                                    "deleteLineMode": "lines",
+                                    "dontRepeat": false,
+                                    "effectLabel": "line break",
+                                    "filepath": "$customVariable[creditsResourcePath]\\credits.html",
+                                    "id": "8f97e620-c8fa-11ee-b4b3-a563b8e75233",
+                                    "replaceLineMode": "lineNumbers",
+                                    "text": "<br>",
                                     "type": "firebot:filewriter",
                                     "writeMode": "append",
                                     "active": true
                                   }
                                 ]
                               },
-                              "id": "52ab8960-9dbf-11eb-8309-3d5ab3778470",
+                              "id": "a7730b1d-c8e3-11ee-b4b3-a563b8e75233",
                               "listType": "custom",
                               "presetListArgs": {},
                               "presetListId": null,
@@ -1212,14 +1243,14 @@
                       }
                     ],
                     "otherwiseEffectData": {
-                      "id": "02f6b890-9dbf-11eb-8309-3d5ab3778470",
+                      "id": "a7730b1e-c8e3-11ee-b4b3-a563b8e75233",
                       "list": []
                     },
                     "type": "firebot:conditional-effects",
                     "active": true
                   }
                 ],
-                "id": "e8cfc710-508b-11ec-8bf8-29a6d3a6a465"
+                "id": "a7730b1f-c8e3-11ee-b4b3-a563b8e75233"
               },
               "effectLabel": "Add titles and names",
               "active": true
@@ -1227,31 +1258,41 @@
             {
               "effectLabel": "Add close tags for the wrappers",
               "effectList": {
-                "id": "34efc0d0-9c70-11eb-a700-a3b45fafc0d1",
+                "id": "a7730b20-c8e3-11ee-b4b3-a563b8e75233",
                 "list": [
                   {
                     "deleteLineMode": "lines",
                     "dontRepeat": true,
                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
-                    "id": "3ca8d5a0-9c70-11eb-a700-a3b45fafc0d1",
+                    "id": "a7730b21-c8e3-11ee-b4b3-a563b8e75233",
                     "replaceLineMode": "lineNumbers",
-                    "text": "</div></div>",
+                    "text": "</p>\n\t\t</div>\n\t</div>\n</div>",
                     "type": "firebot:filewriter",
                     "writeMode": "append",
                     "active": true
                   }
                 ]
               },
-              "id": "d75e1532-5091-11ec-8bf8-29a6d3a6a465",
+              "id": "a7730b22-c8e3-11ee-b4b3-a563b8e75233",
               "listType": "custom",
               "presetListArgs": {},
               "type": "firebot:run-effect-list",
               "active": true
+            },
+            {
+              "id": "fcd927e0-c8e5-11ee-b4b3-a563b8e75233",
+              "type": "firebot:html",
+              "active": true,
+              "enterAnimation": "none",
+              "exitAnimation": "none",
+              "inbetweenAnimation": "none",
+              "html": "$readFile[\"E:\\Streaming\\Assets\\Overlays\\credits\\credits.html\"]",
+              "length": "400"
             }
           ]
         },
-        "id": "3d3d1440-9c4d-11eb-a700-a3b45fafc0d1",
-        "name": "[credits] Roll credits",
+        "id": "a7733220-c8e3-11ee-9de5-27206517008e",
+        "name": "[credits] Roll credits (Firebot Overlay)",
         "sortTags": [
           "91b2fa92-a3af-4dad-8aa5-859f24fa74b7",
           "794beaa2-5557-412e-b1dc-f7fb771edfbd"
@@ -1263,13 +1304,5 @@
     "quickActions": []
   },
   "requireCurrency": false,
-  "importQuestions": [
-    {
-      "id": "84025c00-a60c-4bb5-89fa-9e26e62f241e",
-      "question": "Where did you save the html, css, and txt files?",
-      "helpText": "Copy and paste the location.",
-      "answerType": "text",
-      "replaceToken": "E:\\Streaming\\Assets\\Overlays\\credits"
-    }
-  ]
+  "importQuestions": []
 }

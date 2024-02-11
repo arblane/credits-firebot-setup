@@ -1,0 +1,104 @@
+<style>
+body {
+	/*
+		font-family: Adjust as needed
+		color: Adjust as needed
+	*/
+	margin: 0;
+	padding: 0;
+	font-family: Kalam;
+	color: white;
+}
+
+.container {
+	/*
+		Adjust as needed, this will place the marquee center of the screen.
+		Configured on a resoultion of 1920x1080.
+	*/
+	margin-top: 40px;
+	margin-left: 700px;
+}
+
+.marquee-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.marquee {
+	/*
+		.marquee: This is the background box for the scrolling text
+		width: Adjust as needed
+		height: Adjust as needed
+		background-color: Adjust as needed; fourth number is the opacity value
+	*/
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	width: 500px;
+	height: 500px;
+	padding: 20px 10px;
+	margin: 20px auto;
+	border-radius: 25px;
+	background-color: rgba(170, 93, 213, 0.5);
+	text-align: center;
+	justify-content: space-around;
+}
+
+.marquee p {
+	/*
+		font-size: Font size of the names, increase or decrease the number to your liking.
+		font-weight: Options: 100, 200, 300, 400, 500, 600, 700, 800, 900.
+		margin: Increase or decrease the *px value, this takes care of the space between the blocks.
+		animation: Increase or decrease the *s value to set how fast the text needs to scroll.
+	*/
+	font-size: 25px;
+	font-weight: 300;
+	margin: 0 0 40px 0;
+	white-space: pre-line;
+	animation: marquee 45s linear infinite;
+}
+
+@keyframes marquee {
+	0% { transform: translateY(100%); }
+	100% { transform: translateY(-100%); }
+}
+</style>
+<div class="container">
+	<div class="marquee-container">
+		<div class="marquee">
+			<p>
+<u>Mods:</u>
+11
+12
+<br>
+<u>Follows:</u>
+5
+6
+<br>
+<u>Raids:</u>
+9
+10
+<br>
+<u>Subs & Resubs:</u>
+13
+14
+<br>
+<u>Bits:</u>
+1
+2
+<br>
+<u>Sub gifters:</u>
+7
+8
+<br>
+<u>Community Sub gifters:</u>
+3
+4
+<br>
+</p>
+		</div>
+	</div>
+</div>
