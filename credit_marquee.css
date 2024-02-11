@@ -12,10 +12,13 @@ body {
 .container {
 	/*
 		Adjust as needed, this will place the marquee center of the screen.
-		Configured on a resoultion of 1920x1080.
+		Configured on a resoultion of 1920x1080. 
+		(Second commented is configured to display to the right)
 	*/
 	margin-top: 40px;
-	margin-left: 700px;
+	margin-left: 900px;
+	/* margin-top: -200px; */
+	/* margin-left: 1350px; */
 }
 
 .marquee-container {
