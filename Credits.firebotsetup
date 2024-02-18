@@ -1,7 +1,7 @@
 {
   "name": "Credits",
   "description": "Closing credits for a stream session",
-  "version": 2.1,
+  "version": 2.2,
   "author": "arblane",
   "components": {
     "commands": [
@@ -100,7 +100,8 @@
         "aliases": [],
         "treatQuotedTextAsSingleArg": false,
         "hidden": true,
-        "autoDeleteTrigger": false
+        "autoDeleteTrigger": false,
+        "type": "custom"
       },
       {
         "active": false,
@@ -180,7 +181,8 @@
         "aliases": [],
         "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
         "treatQuotedTextAsSingleArg": false,
-        "hidden": true
+        "hidden": true,
+        "type": "custom"
       }
     ],
     "counters": [],
