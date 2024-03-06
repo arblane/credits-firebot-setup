@@ -9,6 +9,7 @@ Firebot setup for playing credits at the end of stream.
 # Install
 + Download
   + Credits.firebotsetup
+  + credits.html
   + credit_marquee.css
 + Import the downloaded firebotsetup file
   + Customize
