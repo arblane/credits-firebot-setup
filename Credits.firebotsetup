@@ -1,7 +1,7 @@
 {
   "name": "Credits",
   "description": "Closing credits for a stream session",
-  "version": 2.3,
+  "version": 2.4,
   "author": "arblane",
   "components": {
     "commands": [],
@@ -56,7 +56,7 @@
                   "filepath": "$customVariable[creditsResourcePath]\\mods.txt",
                   "id": "4f933060-9dc0-11eb-8309-3d5ab3778470",
                   "replaceLineMode": "lineNumbers",
-                  "text": "$username",
+                  "text": "<img src=\"$userAvatarUrl[$username]\" alt=\"profile image\"><br>$username",
                   "type": "firebot:filewriter",
                   "writeMode": "append",
                   "active": true
@@ -75,6 +75,11 @@
                   "type": "firebot:viewerroles",
                   "comparisonType": "doesn't include",
                   "value": "b05717a0-df0d-11ed-becd-0fc137b93642"
+                },
+                {
+                  "type": "firebot:viewerroles",
+                  "comparisonType": "doesn't include",
+                  "value": "3659cb50-e9de-11ee-a926-b5285c55d6df"
                 }
               ],
               "mode": "exclusive"
@@ -99,9 +104,21 @@
                   "filepath": "$$creditsResourcePath\\follows.txt",
                   "id": "0c2851a1-9e85-11eb-bb0d-edc857bfcae1",
                   "replaceLineMode": "lineNumbers",
-                  "text": "$username",
+                  "text": "<img src=\"$userAvatarUrl[$username]\" alt=\"profile image\"><br>$username",
                   "type": "firebot:filewriter",
                   "writeMode": "append",
+                  "active": true
+                },
+                {
+                  "deleteLineMode": "lines",
+                  "dontRepeat": true,
+                  "effectLabel": "Add the latest follower's name to the file",
+                  "filepath": "$$creditsResourcePath\\latest_follow.txt",
+                  "id": "c45e1220-ea1b-11ee-b15a-1bf15b6cbbf5",
+                  "replaceLineMode": "lineNumbers",
+                  "text": "Welcome $username",
+                  "type": "firebot:filewriter",
+                  "writeMode": "replace",
                   "active": true
                 }
               ]
@@ -131,9 +148,21 @@
                   "filepath": "$$creditsResourcePath\\subs.txt",
                   "id": "67b88bc0-9c4b-11eb-a700-a3b45fafc0d1",
                   "replaceLineMode": "lineNumbers",
-                  "text": "$username",
+                  "text": "<img src=\"$userAvatarUrl[$username]\" alt=\"profile image\"><br>$username",
                   "type": "firebot:filewriter",
                   "writeMode": "append",
+                  "active": true
+                },
+                {
+                  "deleteLineMode": "lines",
+                  "dontRepeat": true,
+                  "effectLabel": "Add latest subbed user to the file",
+                  "filepath": "$$creditsResourcePath\\latest_subs.txt",
+                  "id": "de74fed0-ea1b-11ee-b15a-1bf15b6cbbf5",
+                  "replaceLineMode": "lineNumbers",
+                  "text": "Recent Sub $username x $subCurrentStreak",
+                  "type": "firebot:filewriter",
+                  "writeMode": "replace",
                   "active": true
                 }
               ]
@@ -159,13 +188,25 @@
                 {
                   "deleteLineMode": "lines",
                   "dontRepeat": true,
-                  "effectLabel": "Add sub gifter name to the file",
+                  "effectLabel": "Add sub gifter's name to the file",
                   "filepath": "$$creditsResourcePath\\giftsubs.txt",
                   "id": "9e0aa4b0-9c4b-11eb-a700-a3b45fafc0d1",
                   "replaceLineMode": "lineNumbers",
-                  "text": "$giftGiverUsername",
+                  "text": "<img src=\"$userAvatarUrl[$giftGiverUsername]\" alt=\"profile image\"><br>$giftGiverUsername",
                   "type": "firebot:filewriter",
                   "writeMode": "append",
+                  "active": true
+                },
+                {
+                  "deleteLineMode": "lines",
+                  "dontRepeat": true,
+                  "effectLabel": "Add the latest sub gifter's name to the file",
+                  "filepath": "$$creditsResourcePath\\latest_giftsubs.txt",
+                  "id": "f7e99100-ea1b-11ee-b15a-1bf15b6cbbf5",
+                  "replaceLineMode": "lineNumbers",
+                  "text": "Recent Gift Sub from $giftGiverUsername",
+                  "type": "firebot:filewriter",
+                  "writeMode": "replace",
                   "active": true
                 }
               ]
@@ -195,10 +236,22 @@
                   "filepath": "$$creditsResourcePath\\communitygiftsubs.txt",
                   "id": "b3910cc0-9c4b-11eb-a700-a3b45fafc0d1",
                   "replaceLineMode": "lineNumbers",
-                  "text": "$giftGiverUsername",
+                  "text": "<img src=\"$userAvatarUrl[$giftGiverUsername]\" alt=\"profile image\"><br>$giftGiverUsername",
                   "type": "firebot:filewriter",
                   "writeMode": "append",
                   "active": true
+                },
+                {
+                  "deleteLineMode": "lines",
+                  "dontRepeat": true,
+                  "effectLabel": "Add the latest sub gifter's name to the file",
+                  "filepath": "$$creditsResourcePath\\latest_communitygiftsubs.txt",
+                  "id": "117d9210-ea1c-11ee-b15a-1bf15b6cbbf5",
+                  "replaceLineMode": "lineNumbers",
+                  "text": "$giftGiverUsername",
+                  "type": "firebot:filewriter",
+                  "writeMode": "replace",
+                  "active": false
                 }
               ]
             },
@@ -227,9 +280,21 @@
                   "filepath": "$$creditsResourcePath\\bits.txt",
                   "id": "c7c3f2c0-9c4b-11eb-a700-a3b45fafc0d1",
                   "replaceLineMode": "lineNumbers",
-                  "text": "$username",
+                  "text": "<img src=\"$userAvatarUrl[$username]\" alt=\"profile image\"><br>$username",
                   "type": "firebot:filewriter",
                   "writeMode": "append",
+                  "active": true
+                },
+                {
+                  "deleteLineMode": "lines",
+                  "dontRepeat": true,
+                  "effectLabel": "Add the latest bit tipper's name to the file",
+                  "filepath": "$$creditsResourcePath\\latest_bits.txt",
+                  "id": "21ef2a50-ea1c-11ee-b15a-1bf15b6cbbf5",
+                  "replaceLineMode": "lineNumbers",
+                  "text": "Recent Cheer $username x $cheerBitsAmount Bits",
+                  "type": "firebot:filewriter",
+                  "writeMode": "replace",
                   "active": true
                 }
               ]
@@ -259,9 +324,21 @@
                   "filepath": "$$creditsResourcePath\\hostsraids.txt",
                   "id": "ddad1440-9c4b-11eb-a700-a3b45fafc0d1",
                   "replaceLineMode": "lineNumbers",
-                  "text": "$username",
+                  "text": "<img src=\"$userAvatarUrl[$username]\" alt=\"profile image\"><br>$username",
                   "type": "firebot:filewriter",
                   "writeMode": "append",
+                  "active": true
+                },
+                {
+                  "deleteLineMode": "lines",
+                  "dontRepeat": true,
+                  "effectLabel": "Add the latest raider to the file",
+                  "filepath": "$$creditsResourcePath\\latest_hostsraids.txt",
+                  "id": "5148e660-ea1c-11ee-b15a-1bf15b6cbbf5",
+                  "replaceLineMode": "lineNumbers",
+                  "text": "Recent Raid $username with $raidViewerCount viewers",
+                  "type": "firebot:filewriter",
+                  "writeMode": "replace",
                   "active": true
                 }
               ]
@@ -384,74 +461,6 @@
               "active": true
             },
             {
-              "effectList": {
-                "id": "c3f8cfe0-9e8e-11eb-bb0d-edc857bfcae1",
-                "list": [
-                  {
-                    "effectLabel": "Reset mods credits flag",
-                    "id": "8e00bfa0-508c-11ec-8bf8-29a6d3a6a465",
-                    "name": "modsCreditsSet",
-                    "ttl": 0,
-                    "type": "firebot:customvariable",
-                    "variableData": "0",
-                    "active": true
-                  },
-                  {
-                    "effectLabel": "Reset subs credits flag",
-                    "id": "8e00bfa1-508c-11ec-8bf8-29a6d3a6a465",
-                    "name": "subsCreditsSet",
-                    "ttl": 0,
-                    "type": "firebot:customvariable",
-                    "variableData": "0",
-                    "active": true
-                  },
-                  {
-                    "effectLabel": "Reset sub gifters credits flag",
-                    "id": "8e00bfa2-508c-11ec-8bf8-29a6d3a6a465",
-                    "name": "giftSubsCreditsSet",
-                    "ttl": 0,
-                    "type": "firebot:customvariable",
-                    "variableData": "0",
-                    "active": true
-                  },
-                  {
-                    "effectLabel": "Reset bit tippers credits flag",
-                    "id": "8e00bfa3-508c-11ec-8bf8-29a6d3a6a465",
-                    "name": "bitsCreditsSet",
-                    "ttl": 0,
-                    "type": "firebot:customvariable",
-                    "variableData": "0",
-                    "active": true
-                  },
-                  {
-                    "effectLabel": "Reset hosts & raids credits flag",
-                    "id": "8e00bfa5-508c-11ec-8bf8-29a6d3a6a465",
-                    "name": "hostsRaidsCreditsSet",
-                    "ttl": 0,
-                    "type": "firebot:customvariable",
-                    "variableData": "0",
-                    "active": true
-                  },
-                  {
-                    "effectLabel": "Reset follows credits flag",
-                    "id": "8e00bfa6-508c-11ec-8bf8-29a6d3a6a465",
-                    "name": "followsCreditsSet",
-                    "ttl": 0,
-                    "type": "firebot:customvariable",
-                    "variableData": "0",
-                    "active": true
-                  }
-                ]
-              },
-              "id": "c3f5e9b0-9e8e-11eb-bb0d-edc857bfcae1",
-              "listType": "custom",
-              "presetListArgs": {},
-              "presetListId": null,
-              "type": "firebot:run-effect-list",
-              "effectLabel": "Clear flags",
-              "active": true
-            },
-            {
               "chatter": "Bot",
               "effectLabel": "Confirmation message",
               "id": "535f1860-8172-11ee-a3ec-87363957f7ae",
@@ -483,7 +492,7 @@
                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                     "id": "a772e401-c8e3-11ee-b4b3-a563b8e75233",
                     "replaceLineMode": "lineNumbers",
-                    "text": "<style>\n$readFile[$customVariable[creditsResourcePath]\"\\credit_marquee.css\"]\n</style>\n<div class=\"container\">\n\t<div class=\"marquee-container\">\n\t\t<div class=\"marquee\">\n\t\t\t<p>",
+                    "text": "<div class=\"creditsmarquee\">\n<style>\n$readFile[$customVariable[creditsResourcePath]\"\\credit_marquee.css\"]\n</style>\n<div class=\"container\">\n\t<div class=\"marquee-container\">\n\t\t<div class=\"marquee\">\n\t\t\t<p>",
                     "type": "firebot:filewriter",
                     "writeMode": "append",
                     "active": true
@@ -1087,7 +1096,7 @@
                     "filepath": "$customVariable[creditsResourcePath]\\credits.html",
                     "id": "a7730b21-c8e3-11ee-b4b3-a563b8e75233",
                     "replaceLineMode": "lineNumbers",
-                    "text": "</p>\n\t\t</div>\n\t</div>\n</div>",
+                    "text": "</p>\n\t\t</div>\n\t</div>\n</div>\n</div>",
                     "type": "firebot:filewriter",
                     "writeMode": "append",
                     "active": true
@@ -1107,7 +1116,7 @@
               "enterAnimation": "none",
               "exitAnimation": "none",
               "inbetweenAnimation": "none",
-              "html": "$readFile[$customVariable[creditsResourcePath]\"\\credits.html\"]",
+              "html": "$readFile[$$creditsResourcePath\"\\credits.html\"]",
               "length": "400"
             }
           ]

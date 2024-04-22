@@ -17,8 +17,14 @@ body {
 	*/
 	/* margin-top: 40px; */
 	/* margin-left: 900px; */
-	margin-top: -200px;
+	margin-top: -50px;
 	margin-left: 1350px;
+}
+
+.marquee img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
 }
 
 .marquee-container {
@@ -40,7 +46,7 @@ body {
 	position: relative;
 	overflow: hidden;
 	width: 500px;
-	height: 500px;
+	height: 800px;
 	padding: 20px 10px;
 	margin: 20px auto;
 	border-radius: 25px;
@@ -64,6 +70,11 @@ body {
 }
 
 @keyframes marquee {
-	0% { transform: translateY(100%); }
-	100% { transform: translateY(-200%); }
+	0% {
+		transform: translateY(100%);
+	}
+
+	100% {
+		transform: translateY(-200%);
+	}
 }
