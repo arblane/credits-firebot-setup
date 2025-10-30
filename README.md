@@ -39,4 +39,4 @@ Firebot setup for playing credits at the end of stream.
     + roll the credits, can be connected to a touch portal/stream deck button.
 
 # Credits
-+ Adapted from setup by: cavemobster
++ Adapted from setup by: [CaveMobster's firebot-setup-end-credits script](https://github.com/CaveMobster/firebot-setup-end-credits)
