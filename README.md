@@ -4,7 +4,7 @@
 Firebot setup for playing credits at the end of stream.
 
 # Compatibility
-- Firebot 5.64.0-nightly.25.02.18+
+- Firebot 5.64.0+
 
 # Install
 + Download
@@ -12,8 +12,8 @@ Firebot setup for playing credits at the end of stream.
   + credit_marquee.css
 + Import the downloaded firebotsetup file
   + Customize
-    + You will need to edit the preset effect to change the location of where you want to store the html and text files. This will be handled via an import question.
-    + Location, color, etc of the marquee.
+    + You will need to edit the preset effect to change the location of where you want to store the html, css, and text files. This will be handled via an import question.
+    + Location, color, etc of the marquee in the css file.
 
 # Usage
 
